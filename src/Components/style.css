@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.loading {
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #31363f;
+  min-height: 100vh; /* 100vh representa el 100% de la altura de la ventana del navegador. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  justify-content: center;
+}
+
+.top-content {
+  text-align: center;
+  color: white;
+  margin-bottom: 24px;
+  width: 100%;
+  margin-top: 48px;
+}
+
+.top-content img {
+  margin: 32px;
+  height: 180px;
+}
+
+.top-content h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.type {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 16px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Estilos de los botones según el tipo de Pokémon */
+.type-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor:default;
+}
+
+/* Colores para cada tipo de Pokémon */
+.type-button.normal {
+  background-color: #A8A77A;
+}
+
+.type-button.fire {
+  background-color: #EE8130;
+}
+
+.type-button.water {
+  background-color: #6390F0;
+}
+
+.type-button.electric {
+  background-color: #F7D02C;
+}
+
+.type-button.grass {
+  background-color: #7AC74C;
+}
+
+.type-button.ice {
+  background-color: #96D9D6;
+}
+
+.type-button.fighting {
+  background-color: #C22E28;
+}
+
+.type-button.poison {
+  background-color: #A33EA1;
+}
+
+.type-button.ground {
+  background-color: #E2BF65;
+}
+
+.type-button.flying {
+  background-color: #A98FF3;
+}
+
+.type-button.psychic {
+  background-color: #F95587;
+}
+
+.type-button.bug {
+  background-color: #A6B91A;
+}
+
+.type-button.rock {
+  background-color: #B6A136;
+}
+
+.type-button.ghost {
+  background-color: #735797;
+}
+
+.type-button.dragon {
+  background-color: #6F35FC;
+}
+
+.type-button.dark {
+  background-color: #705746;
+}
+
+.type-button.steel {
+  background-color: #B7B7CE;
+}
+
+.type-button.fairy {
+  background-color: #D685AD;
+}
+
+.base-stat {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.btn-group button {
+  outline: none;
+  border: none;
+  width: 150px;
+  padding: 4px 0;
+  margin: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #b74555;
+  border-radius: 8px;
+  cursor: pointer; /* Cambia el puntero cuando se sitúa el ratón sobre el botón */
+  transition: background-color 0.3s ease; /* Añade una transición suave para el cambio de color */
+}
+
+.btn-group button:hover {
+  background-color: #a23f49;
+}
+
+.bottom-content {
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  margin-bottom: 24px;
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Cuatro columnas de igual tamaño */
+  gap: 16px; /* Espacio entre las tarjetas */
+  padding: 16px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para las tarjetas individuales */
+.card {
+  background-color: #9edef9;
+  border-radius: 16px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+  }
+}

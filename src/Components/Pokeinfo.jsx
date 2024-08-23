@@ -24,9 +24,9 @@ const Pokeinfo = ({ data }) => {
           </div>
           <div className="base-stat">
             {data.stats.map((poke, index) => (
-              <h3 key={index}>
+              <h4 key={index}>
                 {poke.stat.name}: {poke.base_stat}
-              </h3>
+              </h4>
             ))}
           </div>
         </>

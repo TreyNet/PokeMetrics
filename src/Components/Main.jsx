@@ -44,6 +44,19 @@ const Main = () => {
 
   return (
     <div className="container">
+      <header className="header">
+        <h1>PokeMetrics</h1>
+      </header>
+      <div className="top-content">
+        <Pokeinfo data={pokeDex} />
+      </div>
+      <div className="bottom-content">
+        <Card
+          pokemon={pokeData}
+          loading={loading}
+          infoPokemon={(poke) => setPokeDex(poke)}
+        />
+      </div>
       <div className="btn-group">
         {prevUrl && (
           <button
@@ -65,16 +78,6 @@ const Main = () => {
             Next
           </button>
         )}
-      </div>
-      <div className="bottom-content">
-        <Card
-          pokemon={pokeData}
-          loading={loading}
-          infoPokemon={(poke) => setPokeDex(poke)}
-        />
-      </div>
-      <div className="top-content">
-        <Pokeinfo data={pokeDex} />
       </div>
     </div>
   );

@@ -8,25 +8,41 @@
   font-style: normal;
 }
 
+.header {
+  background-color: #b74555;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100vw; /* Representa todo el ancho de la ventana. */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  position: relative; /* Posicionado con respecto al viewport */
+  left: 0; /* Asegura que no haya desplazamiento a la izquierda */
+  right: 0; /* Asegura que no haya desplazamiento a la derecha */
+}
+body {
+  background-color: #31363f;
+  min-height: 100vh; /* Representa el 100% de la altura de la ventana del navegador. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loading {
   color: white;
   justify-content: center;
   align-items: center;
 }
 
-body {
-  background-color: #31363f;
-  min-height: 100vh; /* 100vh representa el 100% de la altura de la ventana del navegador. */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .container {
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   position: relative;
   justify-content: center;
 }
@@ -54,7 +70,7 @@ body {
   width: 100%;
   margin: auto;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   margin-top: 16px;
   gap: 16px;
@@ -68,60 +84,60 @@ body {
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  cursor:default;
+  cursor: default;
 }
 
 /* Colores para cada tipo de Pokémon */
 .type-button.normal {
-  background-color: #A8A77A;
+  background-color: #a8a77a;
 }
 
 .type-button.fire {
-  background-color: #EE8130;
+  background-color: #ee8130;
 }
 
 .type-button.water {
-  background-color: #6390F0;
+  background-color: #6390f0;
 }
 
 .type-button.electric {
-  background-color: #F7D02C;
+  background-color: #f7d02c;
 }
 
 .type-button.grass {
-  background-color: #7AC74C;
+  background-color: #7ac74c;
 }
 
 .type-button.ice {
-  background-color: #96D9D6;
+  background-color: #96d9d6;
 }
 
 .type-button.fighting {
-  background-color: #C22E28;
+  background-color: #c22e28;
 }
 
 .type-button.poison {
-  background-color: #A33EA1;
+  background-color: #a33ea1;
 }
 
 .type-button.ground {
-  background-color: #E2BF65;
+  background-color: #e2bf65;
 }
 
 .type-button.flying {
-  background-color: #A98FF3;
+  background-color: #a98ff3;
 }
 
 .type-button.psychic {
-  background-color: #F95587;
+  background-color: #f95587;
 }
 
 .type-button.bug {
-  background-color: #A6B91A;
+  background-color: #a6b91a;
 }
 
 .type-button.rock {
-  background-color: #B6A136;
+  background-color: #b6a136;
 }
 
 .type-button.ghost {
@@ -129,7 +145,7 @@ body {
 }
 
 .type-button.dragon {
-  background-color: #6F35FC;
+  background-color: #6f35fc;
 }
 
 .type-button.dark {
@@ -137,11 +153,11 @@ body {
 }
 
 .type-button.steel {
-  background-color: #B7B7CE;
+  background-color: #b7b7ce;
 }
 
 .type-button.fairy {
-  background-color: #D685AD;
+  background-color: #d685ad;
 }
 
 .base-stat {
@@ -169,8 +185,8 @@ body {
   color: white;
   background-color: #b74555;
   border-radius: 8px;
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-group button:hover {
@@ -178,15 +194,15 @@ body {
 }
 
 .bottom-content {
-  justify-content: center; 
+  justify-content: center;
   margin-bottom: 24px;
 }
 
 /* Contenedor de las tarjetas */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 16px; 
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
   padding: 16px;
   box-sizing: border-box;
   justify-content: center;
@@ -221,18 +237,18 @@ body {
 /* Ajustes responsivos */
 @media (max-width: 1200px) {
   .card-container {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }

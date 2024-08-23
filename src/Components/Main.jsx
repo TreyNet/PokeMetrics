@@ -19,7 +19,7 @@ const Main = () => {
     const pokemonData = await getPokemon(res.data.results);
     setLoading(false);
 
-    // Selecciona automáticamente el primer Pokémon después de cargar los datos
+    // Selecciona automáticamente el primer Pokémon después de cargar los datos.
     if (pokemonData.length > 0) {
       setPokeDex(pokemonData[0]);
     }

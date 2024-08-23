@@ -169,8 +169,8 @@ body {
   color: white;
   background-color: #b74555;
   border-radius: 8px;
-  cursor: pointer; /* Cambia el puntero cuando se sitúa el ratón sobre el botón */
-  transition: background-color 0.3s ease; /* Añade una transición suave para el cambio de color */
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 .btn-group button:hover {
@@ -178,15 +178,15 @@ body {
 }
 
 .bottom-content {
-  justify-content: center; /* Centra las tarjetas horizontalmente */
+  justify-content: center; 
   margin-bottom: 24px;
 }
 
 /* Contenedor de las tarjetas */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Cuatro columnas de igual tamaño */
-  gap: 16px; /* Espacio entre las tarjetas */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 16px; 
   padding: 16px;
   box-sizing: border-box;
   justify-content: center;
@@ -212,7 +212,6 @@ body {
   transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
 }
 
-/* Imagen dentro de la tarjeta */
 .card img {
   max-width: 100%;
   height: auto;
@@ -222,18 +221,18 @@ body {
 /* Ajustes responsivos */
 @media (max-width: 1200px) {
   .card-container {
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    grid-template-columns: 1fr; 
   }
 }

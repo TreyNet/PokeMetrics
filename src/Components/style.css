@@ -3,16 +3,16 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  /*font-family: "Roboto", sans-serif;*/
   font-weight: 400;
   font-style: normal;
 }
 
 .header {
-  background-color: #b74555;
   color: white;
-  font-size: 20px;
+  font-size: 36px;
   font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
   width: 100vw; /* Representa todo el ancho de la ventana. */
   padding: 20px;
   box-sizing: border-box;
@@ -26,6 +26,7 @@
 }
 body {
   background-color: #31363f;
+  background: linear-gradient(to top, #b74555, #31363f);
   min-height: 100vh; /* Representa el 100% de la altura de la ventana del navegador. */
   display: flex;
   justify-content: center;
@@ -33,6 +34,7 @@ body {
 }
 
 .loading {
+  display: flex;
   color: white;
   justify-content: center;
   align-items: center;
@@ -183,19 +185,31 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  background-color: #b74555;
+  background-color: #31363f;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn-group button:hover {
-  background-color: #a23f49;
+  background-color: white;
+  color: #31363f;
 }
 
 .bottom-content {
   justify-content: center;
   margin-bottom: 24px;
+}
+
+/* Buscador de Pokemons */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 24px;
+  justify-content:center;
+  gap: 8px;
 }
 
 /* Contenedor de las tarjetas */
@@ -211,17 +225,17 @@ body {
 
 /* Estilos para las tarjetas individuales */
 .card {
-  background-color: #9edef9;
-  border-radius: 16px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;;
 }
 
 .card:hover {

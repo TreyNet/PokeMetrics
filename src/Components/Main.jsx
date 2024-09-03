@@ -50,6 +50,10 @@ const Main = () => {
       <div className="top-content">
         <Pokeinfo data={pokeDex} />
       </div>
+      <div className="search">
+          <input type="text" placeholder="Search Pokemon..."></input>
+          <button type="submit">Search</button>
+      </div>
       <div className="bottom-content">
         <Card
           pokemon={pokeData}

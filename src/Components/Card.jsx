@@ -4,7 +4,10 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
   return (
     <>
       {loading ? (
-        <h1 className="loading">Loading...</h1>
+        <div  className="loading">
+          <h1>Loading...</h1>
+        </div>
+        
       ) : (
         <div className="card-container"> {/* Contenedor para las tarjetas */}
           {pokemon.map((item) => (
